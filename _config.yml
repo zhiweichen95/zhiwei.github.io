@@ -62,9 +62,9 @@ disqus_username: zhiweichen95
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: 2a6afc1aebed4f877bc8                            #生成的clientID
-  clientSecret: f2c94e20908cb8d453f1a68d8e0d180005ba4ca5    #生成的clientSecret
-  repo: zhiwei.github.io   #仓库名称
+  clientID: 5dfe743fd94f3806351a                            #生成的clientID
+  clientSecret: b21a62d3746d0b3a96772f384e4eb40251ada84e    #生成的clientSecret
+  repo: zhiweichen95.github.io   #仓库名称
   owner: zhiweichen95    #github用户名
   admin: zhiweichen95
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
