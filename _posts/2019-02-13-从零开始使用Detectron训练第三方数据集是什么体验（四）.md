@@ -9,7 +9,6 @@ catalog: true             # 是否归档
 tags:               #标签
     - Detectron
 ---
-**<center><b><big>从零开始使用Detectron训练第三方数据集是什么体验（四）</b></center>**
 
 > **本栏目分为6个部分：**
 >
@@ -21,9 +20,8 @@ tags:               #标签
 > - [第6部分：测试](http://zhiweichen.top/2019/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Detectron%E8%AE%AD%E7%BB%83%E7%AC%AC%E4%B8%89%E6%96%B9%E6%95%B0%E6%8D%AE%E9%9B%86%E6%98%AF%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C-%E5%85%AD/)
 <big><center> GitHub：https://github.com/zhiweichen95/detectron_my
 
-<center><b><big>第4部分：在detectron上部署数据集</big></b></center>
+<center><b><big>第4部分：在detectron上部署数据集
 
-@[toc]
 # 0 前言
 &emsp;&emsp;本节将对上一节处理好的数据集部署在detectron框架中。
 

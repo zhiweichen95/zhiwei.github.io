@@ -9,7 +9,7 @@ catalog: true             # 是否归档
 tags:               #标签
     - Detectron
 ---
-**<center><b><big>从零开始使用Detectron训练第三方数据集是什么体验（一）<big></b></center>**
+
 
 > **本栏目分为6个部分：**
 >
@@ -21,9 +21,8 @@ tags:               #标签
 > - [第6部分：测试](http://zhiweichen.top/2019/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Detectron%E8%AE%AD%E7%BB%83%E7%AC%AC%E4%B8%89%E6%96%B9%E6%95%B0%E6%8D%AE%E9%9B%86%E6%98%AF%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C-%E5%85%AD/)
 <big><center> GitHub：https://github.com/zhiweichen95/detectron_my
 
-<center><b><big>第1部分：Detectron框架简介与安装<big></b></center>
+<center><b><big>第1部分：Detectron框架简介与安装
 
-@[toc]
 # 1 Detectron简介
 
 &emsp;&emsp;Detectron是Facebook AI研究院(FAIR)于2018年初公开的目前为止业内最佳水平的目标检测平台。据介绍，该项目自 2016 年 7 月启动，构建于 Caffe2 之上，目前支持大量机器学习算法，其中包括 Mask R-CNN（何恺明的研究，ICCV 2017 最佳论文）和 Focal Loss for Dense Object Detection，（ICCV 2017 最佳学生论文）。Facebook 称，该工具包已被应用与公司内部很多团队应用于各类应用中，一旦训练完成，这些计算机视觉模型可被部署在云端或移动设备上。
@@ -33,6 +32,7 @@ tags:               #标签
 # 2 Detectron安装
 &emsp;&emsp;Detectron是基于caffe2上的，命令安装流程如下：
 
+```
     git clone https://github.com/pytorch/pytorch.git
     cd pytorch
     git checkout v0.4.1
@@ -42,6 +42,7 @@ tags:               #标签
     cmake ..
     make -j4
     sudo make install -j
+```
 
 ```
 git submodule update --init

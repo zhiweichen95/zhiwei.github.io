@@ -9,7 +9,6 @@ catalog: true             # 是否归档
 tags:               #标签
     - Detectron
 ---
-**<center><b><big>从零开始使用Detectron训练第三方数据集是什么体验（六）</b></center>**
 
 > **本栏目分为6个部分：**
 >
@@ -21,9 +20,8 @@ tags:               #标签
 > - 第6部分（本文）：测试
 <big><center> GitHub：https://github.com/zhiweichen95/detectron_my
 
-<center><b><big>第6部分：测试</big></b></center>
+<center><b><big>第6部分：测试
 
-@[toc]
 # 0 前言
 &emsp;&emsp;训练完成后，自动会进行测试输出结果。如果还需要复现测试结果，本章节内容将详述。
 # 1 复现测试数据集的mAP计算
