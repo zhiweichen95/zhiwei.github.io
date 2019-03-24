@@ -28,6 +28,7 @@ tags:               #标签
 # 1 创建文件夹
 &emsp;&emsp;按照如下的文件树创建文件夹。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213214022239.png)
+
 # 2 放入数据集
 - annotations文件夹：
 把上一小节生成的json文件全部放入。
