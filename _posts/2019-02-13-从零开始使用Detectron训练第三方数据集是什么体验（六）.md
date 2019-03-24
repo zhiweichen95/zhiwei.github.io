@@ -1,4 +1,4 @@
-﻿---
+---
 layout:     post              # 使用的布局（不需要改）
 title:      从零开始使用Detectron训练第三方数据集是什么体验（六）         # 标题
 subtitle:   测试
@@ -20,7 +20,7 @@ tags:               #标签
 > - 第6部分（本文）：测试
 <big><center> GitHub：https://github.com/zhiweichen95/detectron_my
 
-<center><b><big>第6部分：测试
+<center>第6部分：测试</center>
 
 # 0 前言
 &emsp;&emsp;训练完成后，自动会进行测试输出结果。如果还需要复现测试结果，本章节内容将详述。
