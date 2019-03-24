@@ -5,7 +5,7 @@ header-img: img/post-bg-desk.jpg
 email: zhiweichen95@126.com
 description: "Every failure is leading towards success."
 keyword: "ZW, ZW Blog, 志威的博客"
-url: "http://zhiwei.github.io"          # your host, for absolute URL
+url: "http://zhiweichen95.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/zhiweichen95/zhiwei.github.io.git" # you code repository
 
