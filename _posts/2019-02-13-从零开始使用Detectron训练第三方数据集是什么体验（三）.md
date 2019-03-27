@@ -8,6 +8,8 @@ header-img: img/post-bg-2015.jpg  #这篇文章标题背景图片
 catalog: true             # 是否归档
 tags:               #标签
     - Detectron
+    - Caffe2
+
 ---
 
 > **本栏目分为6个部分：**
@@ -30,7 +32,7 @@ tags:               #标签
 &emsp;&emsp;将训练图片放在同一个文件夹中，将测试图片放在同一个文件夹中。
 # 1 xml转json
 &emsp;&emsp;xml2json.py文件如下：
-```
+```python
 # coding=utf-8
 import xml.etree.ElementTree as ET
 import os
@@ -243,7 +245,7 @@ if __name__ == '__main__':
 &emsp;&emsp;运行好该代码后分别可以得到两个文件：train.json，test.json.
 # 2 制作txt文件
 &emsp;&emsp;ImageSetsMainCreate.py文件如下：
-```
+```python
 # -*- coding: utf-8 -*-
 # @Author: zhiwei
 # @Date:   2019-01-31 09:38:58
@@ -285,10 +287,12 @@ print len([name for name in os.listdir(fp1_path)])
 
 ```
 使用该代码生成了8个txt文件，如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213212657523.png)
+![](https://wx1.sinaimg.cn/large/007ccxpDly1g1hotpbeadj30740550sm.jpg)
 文件内容格式如下（以bicycle_test.txt为例，把所有的100张测试图片都囊括）：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213212817535.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p3X19jaGVu,size_16,color_FFFFFF,t_70)
+![](https://ws4.sinaimg.cn/large/007ccxpDly1g1hou2mbn8j30fn0q2wgd.jpg)
 需要注意的是test.txt和train.txt两个文件的格式如下：（以train.txt为例，一共有200个）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213213017196.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p3X19jaGVu,size_16,color_FFFFFF,t_70)
+![](https://wx3.sinaimg.cn/large/007ccxpDly1g1houcrxadj30bw0gnwew.jpg)
+
 <hr>
 第三部分到此结束。如有任何问题，欢迎留言交流学习。
+

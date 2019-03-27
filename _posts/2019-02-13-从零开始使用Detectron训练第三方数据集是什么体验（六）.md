@@ -8,6 +8,7 @@ header-img: img/post-bg-2015.jpg  #这篇文章标题背景图片
 catalog: true             # 是否归档
 tags:               #标签
     - Detectron
+    - Caffe2
 ---
 
 > **本栏目分为6个部分：**
@@ -26,7 +27,7 @@ tags:               #标签
 &emsp;&emsp;训练完成后，自动会进行测试输出结果。如果还需要复现测试结果，本章节内容将详述。
 # 1 复现测试数据集的mAP计算
 
-```
+```python
 python ./tools/test.py --cfg configs/my/retinanet_R-50-FPN_1x1.0.yaml \
                        TEST.WEIGHTS experiments/2.0/train/voc_2007_train/retinanet/model_final.pkl
 ```
@@ -35,7 +36,7 @@ python ./tools/test.py --cfg configs/my/retinanet_R-50-FPN_1x1.0.yaml \
 
 # 2 使用一些图片进行测试并可视化
 &emsp;&emsp;本项目需要测试的图片jpg存放的文件夹路径为：`$Detectron/mytest/input/`
-```
+```python
 python ./tools/infer_simple.py --cfg configs/my/retinanet_R-50-FPN_1x1.0.yaml \
                                --wts experiments/2.0/train/voc_2007_train/retinanet/model_final.pkl \
                                --output-dir mytest/output/ \
@@ -49,7 +50,8 @@ python ./tools/infer_simple.py --cfg configs/my/retinanet_R-50-FPN_1x1.0.yaml \
 这样就可以进行目标检测辣~
 
 可以看看本人跑出的结果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213223609279.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p3X19jaGVu,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213223648895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p3X19jaGVu,size_16,color_FFFFFF,t_70)
+![](https://wx3.sinaimg.cn/large/007ccxpDly1g1hos827bcj30cu07679q.jpg)
+![](https://ws4.sinaimg.cn/large/007ccxpDly1g1hosk1uwlj30cy0dmakg.jpg)
 <hr>
 本项目就到此结束啦。如有任何问题，欢迎留言交流学习。
+

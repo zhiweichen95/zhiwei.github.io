@@ -8,6 +8,7 @@ header-img: img/post-bg-2015.jpg  #这篇文章标题背景图片
 catalog: true             # 是否归档
 tags:               #标签
     - Detectron
+    - Caffe2
 ---
 
 > **本栏目分为6个部分：**
@@ -59,9 +60,10 @@ $ cd labelImgPlus
 $ ./labelImg.py
 ```
 主界面：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213170533539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p3X19jaGVu,size_16,color_FFFFFF,t_70,center)
+![](https://wx1.sinaimg.cn/large/007ccxpDly1g1hoq1vgj5j30e207xab5.jpg)
+
 - 在`PATH/labelImgPlus/data/`文件夹中，找到`predefined_classes.txt`，本项目需要检测`people, electric bicycle, bicycle`三个类别，所以需改成如下格式：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213171737513.png)
+![](<https://ws4.sinaimg.cn/large/007ccxpDly1g1hoqbnptij3047026t8h.jpg>)
 - File-->setting 模式选择
 选择DET模式（DET Mode）
 - 首先File-->change default save path， 选择默认的保存路径。
@@ -132,3 +134,4 @@ electric_bicycle150.xml
 
 <hr>
  第二部分到此结束。如有任何问题，欢迎留言交流学习。
+

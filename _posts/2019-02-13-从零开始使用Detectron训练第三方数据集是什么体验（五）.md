@@ -8,6 +8,7 @@ header-img: img/post-bg-2015.jpg  #这篇文章标题背景图片
 catalog: true             # 是否归档
 tags:               #标签
     - Detectron
+    - Caffe2
 ---
 
 > **本栏目分为6个部分：**
@@ -30,7 +31,8 @@ tags:               #标签
 &emsp;&emsp;如：本人将`retinanet_R-50-FPN_1x.yaml`复制到`Detectron\configs\my`目录下重命名为`retinanet_R-50-FPN_1x1.0.yaml`
 # 2 修改yaml文件
 &emsp;&emsp;对`retinanet_R-50-FPN_1x1.0.yaml`进行修改，如下图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213220156910.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p3X19jaGVu,size_16,color_FFFFFF,t_70)
+![](https://wx4.sinaimg.cn/large/007ccxpDly1g1hovitcpmj30if0qedia.jpg)
+
 - NUM_CLASSES：类别+1 ==> 3+1=4
 - WEIGHTS：可以自己根据给出的网址下载权重然后指定路径；也可以默认不改。
 - TRAIN：DATASETS：之前生成的voc_2007_train.json ==>('voc_2007_train',)

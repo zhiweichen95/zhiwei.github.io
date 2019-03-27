@@ -8,6 +8,7 @@ header-img: img/post-bg-2015.jpg  #这篇文章标题背景图片
 catalog: true             # 是否归档
 tags:               #标签
     - Detectron
+    - Caffe2
 ---
 
 > **本栏目分为6个部分：**
@@ -27,25 +28,34 @@ tags:               #标签
 
 # 1 创建文件夹
 &emsp;&emsp;按照如下的文件树创建文件夹。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213214022239.png)
+
+![](<https://wx2.sinaimg.cn/large/007ccxpDly1g1hoh2wg1nj305q06a0sl.jpg>)
+
+
 
 # 2 放入数据集
+
 - annotations文件夹：
-把上一小节生成的json文件全部放入。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213214217915.png)
+  把上一小节生成的json文件全部放入。
+
+  ![](https://ws4.sinaimg.cn/large/007ccxpDly1g1hojz5hcej307d01q3ya.jpg)
+
 - JPEGImages文件夹
-把所有的图片（训练集+测试集=300张全部放入），这就是为啥文件名都要取不一样的。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213214356380.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p3X19jaGVu,size_16,color_FFFFFF,t_70)
+  把所有的图片（训练集+测试集=300张全部放入），这就是为啥文件名都要取不一样的。
+  ![](https://wx2.sinaimg.cn/large/007ccxpDly1g1hol97gdyj30mt0d2ta7.jpg)
+
 - VOC2007\VOCdevkit2007\VOC2007\Annotations 文件夹
-把第二部分生成的所有的xml文件全部放入（训练集+测试集=300）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213214527215.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p3X19jaGVu,size_16,color_FFFFFF,t_70)
+  把第二部分生成的所有的xml文件全部放入（训练集+测试集=300）
+  ![](https://ws2.sinaimg.cn/large/007ccxpDly1g1homixj60j30mf0d7myc.jpg)
+
 - VOC2007\VOCdevkit2007\VOC2007\ImageSets\Main 文件夹
-把上一节中生成的8个txt文件夹移入。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2019021321462858.png)
+  把上一节中生成的8个txt文件夹移入。
+  ![](https://ws4.sinaimg.cn/large/007ccxpDly1g1hon5unb3j307g04tq2u.jpg)
+
 - VOC2007\VOCdevkit2007\VOC2007\JPEGImages 文件夹
-把所有的图片移入。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213214708280.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p3X19jaGVu,size_16,color_FFFFFF,t_70)
-特别说明：其他没有说明的文件夹都为空文件夹。
+  把所有的图片移入。
+  ![](https://ws1.sinaimg.cn/large/007ccxpDly1g1honflyfyj30l40d875n.jpg)
+  特别说明：其他没有说明的文件夹都为空文件夹。
 # 3 在detectron框架中部署数据集
 - 下载仓库`git clone https://github.com/facebookresearch/Detectron.git`
 
@@ -53,3 +63,4 @@ tags:               #标签
 
 <hr>
  第四部分到此结束。如有任何问题，欢迎留言交流学习。
+
