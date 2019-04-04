@@ -17,4 +17,4 @@ tags:               #标签
 
 
 
-![](<https://wx4.sinaimg.cn/large/007ccxpDgy1g1qpnuc1cmj30ykcn2hdu.jpg>)
+![](..\img\post\resnet50Architecture.jpg)
