@@ -15,6 +15,4 @@ tags:               #标签
     </h1>
 
 
-
-
-![](/img/post/resnet50Architecture.jpg)
+![resnet50Architecture](https://wx4.sinaimg.cn/large/007ccxpDgy1g1qttlo0edj30ykcn2hdu.jpg)
