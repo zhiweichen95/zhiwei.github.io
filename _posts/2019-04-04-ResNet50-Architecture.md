@@ -13,6 +13,4 @@ tags:               #标签
 <center> <h1>
     ResNet 50 Architecture
     </h1>
-
-
-![resnet50Architecture](https://wx4.sinaimg.cn/large/007ccxpDgy1g1qttlo0edj30ykcn2hdu.jpg)
+![resnet50Architecture](http://ws3.sinaimg.cn/mw690/007ccxpDgy1g1qttlo0edj30ykcn2hdu.jpg)
