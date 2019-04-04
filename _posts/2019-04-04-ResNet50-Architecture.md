@@ -17,4 +17,4 @@ tags:               #标签
 
 
 
-![](..\img\post\resnet50Architecture.jpg)
+![](/img/post/resnet50Architecture.jpg)
