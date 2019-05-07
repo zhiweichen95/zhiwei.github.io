@@ -26,11 +26,11 @@ CornerNet的方法为啥比基于anchor box的方法更牛逼？作者认为有�
 
 这个图展示了整个框架，但是看不懂 😂
 
-![Xnip2019-05-07_19-48-15](//wx4.sinaimg.cn/mw690/007ccxpDgy1g2szvm93s6j30uk0g7gtt.jpg)
+![Xnip2019-05-07_19-48-15](http://wx4.sinaimg.cn/mw690/007ccxpDgy1g2szvm93s6j30uk0g7gtt.jpg)
 
 那看下一个图：
 
-![Xnip2019-05-07_19-51-43](//wx4.sinaimg.cn/mw690/007ccxpDgy1g2szx62ovzj311z09m0yi.jpg)
+![Xnip2019-05-07_19-51-43](http://wx4.sinaimg.cn/mw690/007ccxpDgy1g2szx62ovzj311z09m0yi.jpg)
 
 输入图片经过HG基础网络后，得到一个特征图，然后将该特征图作为两个Prediction模块的输入，分别是Top-left corners和Bottom-right corners。在每个预测模块里面，先经过Corner Pooling，然后输出Heatmaps,Embeddings,Offsets分支。我们先不管Corner Pooling了，先认为是一个普通的Pooling，只是这个Pooling不改变特征图尺寸。
 
@@ -49,29 +49,29 @@ cornerNet在预测左上角点和右上角点时，首先会分别生成大小�
 
 作者使用了一个变种的focal loss作为损失函数：
 
-![image](//wx3.sinaimg.cn/mw690/007ccxpDgy1g2szzmd5a4j30gp02hwep.jpg)
+![image](http://wx3.sinaimg.cn/mw690/007ccxpDgy1g2szzmd5a4j30gp02hwep.jpg)
 
 其中pcij 表示类别c并且位置为（i，j）是边角点的概率。ycij 是真实标签，如果某一真实bbox的边角点的位置是（i,j）并且物体类别是c那么ycij=1 。N是所有的真实bbox个数。α,β 是超参数。上面的公式中，当ycij !=1 时，也就是负位置时，前面加多了 1−ycij ，这个就是用来减少正位置附近的位置的惩罚权重。
 
-在前面的概览中，提到了offsets。offsets就是为了避免将真实边角点坐标用热图表示而引起精度损失而引入的。假设第k个真实的边角点的位置为xk, yk ，可以计算其偏移量为：![image](//ws3.sinaimg.cn/mw690/007ccxpDgy1g2t0211j2cj30bh02daa1.jpg)
+在前面的概览中，提到了offsets。offsets就是为了避免将真实边角点坐标用热图表示而引起精度损失而引入的。假设第k个真实的边角点的位置为xk, yk ，可以计算其偏移量为：![image](http://ws3.sinaimg.cn/mw690/007ccxpDgy1g2t0211j2cj30bh02daa1.jpg)
 
 其中n表示网络输入尺寸与网络输出尺寸的比值，或者说下采样因子。在实际使用中，所有类别的边角点都共用一个offsets。在训练的时候采用smooth L1损失函数：
-![image](//ws2.sinaimg.cn/mw690/007ccxpDgy1g2t037lipgj30cb02i0ss.jpg)
+![image](http://ws2.sinaimg.cn/mw690/007ccxpDgy1g2t037lipgj30cb02i0ss.jpg)
 
 ## 边角点聚集
 由于在一张图片中有可能有多个物体，这时候就会检测出来多个左上角点和右下角点。那么就需要确定某一对左下角点和右下角点对是否属于同一个bbox。这位问题在概览中的embedding已经有了一定的描述。这边主要看是如何学习embedding的。根据两个embedding的功能，希望网络输出的两个embedding中，属于同一bbox的左上角点和右下角点的embdding值应该是要很相近的。为此，可以使用以下损失函数：
-![image](//wx4.sinaimg.cn/mw690/007ccxpDgy1g2t03vnpy0j30gs07taan.jpg)
+![image](http://wx4.sinaimg.cn/mw690/007ccxpDgy1g2t03vnpy0j30gs07taan.jpg)
 k表示第k个bbox，etk、ebk  分别表示第k个bbox左上角点的embedding值和右下角点的embedding值。而ek 则是etk 和ebk 的均值。Lpull目的是使属于同一bbox的边角点的embedding值尽量一样。Lpush 目的是使不同的bbox的embedding值要有区分度。
 
 ## Corner Pooling
 在确定一个像素是否是左上角点时，需要在水平方向上往右看，在竖直方向上往下看。在确定是否时右下角点时，则需要在水平方向上往左看，在竖直方向上往上看。因此作者提出了corner polling。具体如下图：
-![image](//ws1.sinaimg.cn/mw690/007ccxpDgy1g2t063a56bj30na0d5jtu.jpg)
+![image](http://ws1.sinaimg.cn/mw690/007ccxpDgy1g2t063a56bj30na0d5jtu.jpg)
 上图展示的时top-left corner poolling，对于左上角的corner pooling根据一开始的分析，需要分别往下扫描和往右扫描，然后分别取最大值，最后相加。下图是一个实际的例子：
-![image](//ws1.sinaimg.cn/mw690/007ccxpDgy1g2t06nvq7oj30mt09kq43.jpg)
+![image](http://ws1.sinaimg.cn/mw690/007ccxpDgy1g2t06nvq7oj30mt09kq43.jpg)
 
 ## 预测模块结构
 预测模块的结构图如下：
-![image](//ws4.sinaimg.cn/mw690/007ccxpDgy1g2t078kfcuj30uc0bfdhu.jpg)
+![image](http://ws4.sinaimg.cn/mw690/007ccxpDgy1g2t078kfcuj30uc0bfdhu.jpg)
 
 ## 实验结果
-![image](//ws3.sinaimg.cn/mw690/007ccxpDgy1g2t07vwf6kj31260grk0g.jpg)
+![image](http://ws3.sinaimg.cn/mw690/007ccxpDgy1g2t07vwf6kj31260grk0g.jpg)
