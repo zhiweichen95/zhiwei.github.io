@@ -1,7 +1,7 @@
 ---
 layout:     post              # 使用的布局（不需要改）
-title:      CornerNet论文解读          # 标题
-subtitle:   Utilizing the Instability in Weakly Supervised Object Detection  #副标题
+title:      Utilizing the Instability in Weakly Supervised Object Detection 解读          # 标题
+subtitle:   CVPR2019  #副标题
 date:       2019-07-02     # 时间
 author:     zhiwei        # 作者
 header-img: img/post-bg-2015.jpg  #这篇文章标题背景图片
